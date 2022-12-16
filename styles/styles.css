@@ -200,10 +200,11 @@ section {
   padding-right: 18rem;
 }
 .header-content .right-header .name {
-  font-size: 3rem;
+  font-size: 1.8rem;
 }
 .header-content .right-header .name span {
   color: var(--color-secondary);
+  font-size: 1.8rem;
 }
 .header-content .right-header p {
   margin: 1.5rem 0;
@@ -245,16 +246,17 @@ section {
   flex-direction: column;
 }
 .about-container .right-about .about-item .abt-text .medium-text {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--color-secondary);
 }
 .about-container .right-about .about-item .abt-text .small-text {
   padding-left: 1.75rem;
   position: relative;
-  font-size: 1.2rem;
+  font-size: 0.90rem;
   color: var(--color-grey-1);
   letter-spacing: 2px;
+  display: flex;
 }
 .about-container .right-about .about-item .abt-text .small-text::before {
   content: "";
@@ -277,7 +279,6 @@ section {
   font-size: 2rem;
   text-transform: uppercase;
 }
-
 .about-stats {
   padding-bottom: 4rem;
 }
@@ -701,6 +702,26 @@ section {
   transition: all 0.4s ease-out;
 }
 .main-btn:hover::before {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  transform: translateX(0);
+  transition: all 0.4s ease-out;
+}
+
+.subbutton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: all 0.4s ease-out;
+  z-index: -1;
+}
+.subbutton:hover {
+  transition: all 0.4s ease-out;
+}
+.subbutton:hover::before {
   width: 100%;
   height: 100%;
   background-color: var(--color-secondary);
